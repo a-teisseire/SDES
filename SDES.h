@@ -1,9 +1,11 @@
 #ifndef SDES_H
 #define SDES_H
 
-BYTE encrypt(BYTE b, WORD key);
-BYTE decrypt(BYTE b, WORD key);
-void decryptString(BYTE *b, char *dst, WORD key);
-void encryptString(BYTE *b, char *dst, WORD key);
+#include <stdint.h>
+
+uint8_t encrypt(uint8_t b, uint16_t key);
+uint8_t decrypt(uint8_t b, uint16_t key);
+void decryptString(uint8_t *b, char *dst, uint16_t key);
+void encryptString(uint8_t *b, char *dst, uint16_t key);
 
 #endif
